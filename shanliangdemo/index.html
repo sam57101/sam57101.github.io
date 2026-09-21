@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="善良的魔女传 - 沉浸式奇幻阅读平台。收录经典与原创魔幻题材，探索正义与邪恶的边界，体验感人的成长故事与宏大的世界观设定。">
+    <meta name="keywords" content="善良的魔女传, 魔幻小说, 奇幻阅读, 原创故事, 网络文学">
+    <title>善良的魔女传-奇幻魔幻题材在线阅读与故事指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a1b9a;
+            --primary-light: #9c4dcc;
+            --accent-color: #ffca28;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-secondary: #6b7280;
+            --border-radius: 12px;
+            --container-width: 1200px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/magic/1920/600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            margin-left: var(--spacing-md);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: var(--spacing-lg) auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* Section Title */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--spacing-lg);
+            border-left: 5px solid var(--primary-color);
+            padding-left: var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Grid Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-cover {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: var(--spacing-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid #eee;
+            padding-top: var(--spacing-md);
+        }
+
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            background-color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .featured-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .featured-text h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+
+        .featured-text p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+        }
+
+        .featured-image {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .category-item {
+            background: white;
+            padding: var(--spacing-md);
+            text-align: center;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .category-item:hover {
+            background-color: #f9f9f9;
+            border-color: var(--primary-light);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid #374151;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            nav ul {
+                gap: var(--spacing-md);
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <span>✨</span> 善良的魔女传
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#latest">最新更新</a></li>
+                <li><a href="#ranking">排行榜</a></li>
+                <li><a href="#categories">分类</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn" aria-label="搜索">🔍</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>善良的魔女传</h1>
+        <p>探索魔法与勇气的边界，在一个充满未知与奇迹的世界里，见证一位魔女的成长与救赎之路。</p>
+        <div>
+            <a href="#latest" class="btn btn-primary">开始阅读</a>
+            <a href="#about" class="btn btn-outline">了解更多</a>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- Featured Story -->
+    <section class="featured-section" id="about">
+        <div class="featured-text">
+            <h2>关于《善良的魔女传》</h2>
+            <p>这是一个关于误解、偏见与最终理解的故事。在这个魔法与科技并存的时代，魔女往往被视为危险的异类。然而，故事的主角却选择用善良去化解世间的坚冰。这不仅是一部奇幻冒险小说，更是一次对人性的深刻探讨。</p>
+            <p>无论你是喜欢热血战斗，还是偏爱细腻的情感描写，都能在这部作品中找到共鸣。加入我们的阅读行列，一起见证魔法的力量。</p>
+            <div style="display: flex; gap: 10px;">
+                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem;">#奇幻</span>
+                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem;">#治愈</span>
+                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem;">#成长</span>
+            </div>
+        </div>
+        <div class="featured-image">
+            <img src="https://picsum.photos/seed/witch1/600/400" alt="善良的魔女传封面">
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories">
+        <div class="section-header">
+            <h2 class="section-title">热门分类</h2>
+            <span class="section-subtitle">发现更多精彩故事</span>
+        </div>
+        <div class="category-grid">
+            <div class="category-item">
+                <span class="category-icon">🧙‍♀️</span>
+                <span class="category-name">魔女学院</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">⚔️</span>
+                <span class="category-name">异界战斗</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🏰</span>
+                <span class="category-name">王国史诗</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🧪</span>
+                <span class="category-name">炼金术士</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Updates -->
+    <section id="latest">
+        <div class="section-header">
+            <h2 class="section-title">最新章节</h2>
+            <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">查看全部</a>
+        </div>
+        <div class="grid-3">
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/magic2/400/300" alt="封面">
+                    <span class="card-badge">更新</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第一章：初入迷雾森林</h3>
+                    <p class="card-desc">年轻的魔女艾莉丝第一次离开学院，来到了传说中的迷雾森林。她不知道，一场关于古老预言的冒险即将展开...</p>
+                    <div class="card-meta">
+                        <span>📅 2023-10-24</span>
+                        <span>👁 12,304</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/magic3/400/300" alt="封面">
+                    <span class="card-badge">热门</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第二章：被遗忘的契约</h3>
+                    <p class="card-desc">在森林深处，艾莉丝发现了一座废弃的古老神殿。神殿的守护者苏醒，向她提出了一个改变命运的契约...</p>
+                    <div class="card-meta">
+                        <span>📅 2023-10-23</span>
+                        <span>👁 15,892</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/magic4/400/300" alt="封面">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第三章：宿命的相遇</h3>
+                    <p class="card-desc">为了寻找契约的线索，艾莉丝在小镇上遇到了一位神秘的流浪剑客。两人从最初的互相提防，到后来的并肩作战...</p>
+                    <div class="card-meta">
+                        <span>📅 2023-10-22</span>
+                        <span>👁 9,456</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Ranking / Hot -->
+    <section id="ranking" style="margin-top: var(--spacing-lg);">
+        <div class="section-header">
+            <h2 class="section-title">人气榜单</h2>
+        </div>
+        <div class="grid-3">
+            <article class="card">
+                <div class="card-body">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: #ddd;">01</div>
+                        <div>
+                            <h3 class="card-title">魔女之泪</h3>
+                            <p class="card-desc">经典开篇，扣人心弦。</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: #ddd;">02</div>
+                        <div>
+                            <h3 class="card-title">暗夜回响</h3>
+                            <p class="card-desc">悬疑与魔法的完美结合。</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: #ddd;">03</div>
+                        <div>
+                            <h3 class="card-title">星辰的指引</h3>
+                            <p class="card-desc">治愈系魔幻故事。</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2 class="section-title">常见问题</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    如何开始阅读《善良的魔女传》？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    您可以直接点击首页的“开始阅读”按钮，或者访问“最新章节”栏目，选择您感兴趣的章节即可免费阅读。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    网站是否支持移动端阅读？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    是的，本站完全响应式设计，完美适配手机、平板和电脑等各种设备，随时随地畅读。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    是否需要注册账号？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    注册账号可以保存您的阅读进度和收藏喜欢的章节，未注册用户也可以直接阅读免费内容。
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>关于善良的魔女传</h3>
+            <p style="font-size: 0.9rem; color: #9ca3af; line-height: 1.8;">
+                我们致力于提供高质量的奇幻文学阅读体验，为读者打造一个充满想象力的魔法世界。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>快速链接</h3>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">最新章节</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">投稿指南</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>阅读分类</h3>
+            <ul>
+                <li><a href="#">魔幻小说</a></li>
+                <li><a href="#">玄幻故事</a></li>
+                <li><a href="#">异界冒险</a></li>
+                <li><a href="#">经典复刻</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>联系我们</h3>
+            <ul>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">版权声明</a></li>
+                <li><a href="#">广告合作</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 善良的魔女传阅读平台 版权所有</p>
+    </div>
+</footer>
+
+<script>
+    // 简单的FAQ交互逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+
+        // 导航栏平滑滚动
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+                  </html>
