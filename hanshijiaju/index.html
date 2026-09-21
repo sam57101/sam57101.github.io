@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩式家具官网提供韩式实木家具、现代简约家具及软装搭配方案，涵盖客厅、卧室、餐厅等全屋定制服务，打造温馨雅致的韩式家居生活。">
+    <meta name="keywords" content="韩式家具,韩式实木家具,现代简约家具,全屋定制,软装搭配">
+    <title>韩式家具-温馨雅致的韩式实木家具与全屋定制方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8D6E63;
+            --secondary-color: #D7CCC8;
+            --accent-color: #5D4037;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --spacing-xl: 64px;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            font-size: 14px;
+            color: var(--text-light);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .header-top span {
+            margin-right: var(--spacing-md);
+        }
+
+        .header-top a:hover {
+            color: var(--primary-color);
+        }
+
+        .main-header {
+            padding: var(--spacing-md) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/furniture1/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 18px;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Categories */
+        .categories {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: var(--spacing-lg) var(--spacing-md);
+            color: var(--white);
+        }
+
+        .category-overlay h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        /* Product Showcase */
+        .showcase {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            height: 260px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: var(--spacing-md);
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-price {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Guide Section */
+        .guide {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+
+        .guide-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xl);
+        }
+
+        .guide-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .guide-visual {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .guide-visual img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-list li {
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .guide-list .icon {
+            color: var(--primary-color);
+            margin-right: var(--spacing-md);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: var(--spacing-md);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: var(--spacing-md) var(--spacing-lg);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3E2723;
+            color: #D7CCC8;
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-col ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+            
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .main-header {
+                justify-content: center;
+            }
+
+            .header-actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <span>欢迎光临韩式家具官方网</span>
+                <span>免费配送 · 30天无理由退换</span>
+                <span>服务热线：400-123-4567</span>
+            </div>
+            <div class="main-header">
+                <a href="#" class="logo">
+                    韩式家具<span>韩式家居生活专家</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#">新品上市</a></li>
+                        <li><a href="#">客厅系列</a></li>
+                        <li><a href="#">卧室系列</a></li>
+                        <li><a href="#">餐厅系列</a></li>
+                        <li><a href="#">软装搭配</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="btn btn-outline">登录</a>
+                    <a href="#" class="btn btn-primary">免费设计</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>回归自然，品味雅致生活</h1>
+                <p>精选进口实木与环保板材，融合韩式简约美学与现代工艺，为您打造温馨、舒适的理想居所。</p>
+                <a href="#products" class="btn btn-primary">浏览全屋系列</a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🌿</div>
+                        <h3>环保材质</h3>
+                        <p>严格甄选E0级环保板材与原木，无异味，守护家人健康。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>经典设计</h3>
+                        <p>传承韩式田园与极简风格，线条流畅，色彩温馨雅致。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>精湛工艺</h3>
+                        <p>手工打磨与精密数控结合，细节处彰显品质与匠心。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏠</div>
+                        <h3>全屋定制</h3>
+                        <p>提供从设计到安装的一站式服务，量身打造您的专属空间。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门分类</h2>
+                    <p>探索不同空间的韩式美学方案</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/livingroom/600/600" alt="韩式客厅家具">
+                        <div class="category-overlay">
+                            <h3>温馨客厅</h3>
+                            <p>沙发、茶几、电视柜</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/bedroom/600/600" alt="韩式卧室家具">
+                        <div class="category-overlay">
+                            <h3>浪漫卧室</h3>
+                            <p>双人床、衣柜、梳妆台</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/dining/600/600" alt="韩式餐厅家具">
+                        <div class="category-overlay">
+                            <h3>雅致餐厅</h3>
+                            <p>餐桌椅、餐边柜</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/study/600/600" alt="韩式书房家具">
+                        <div class="category-overlay">
+                            <h3>静谧书房</h3>
+                            <p>书桌、书柜、休闲椅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2>当季热销</h2>
+                    <p>精选款韩式家具，为您的生活增添一份舒适与格调</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/sofa1/400/400" alt="韩式布艺沙发">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">客厅</div>
+                            <h3 class="product-title">经典田园布艺三人沙发</h3>
+                            <div class="product-price">¥3,599</div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/bed2/400/400" alt="韩式实木床">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">卧室</div>
+                            <h3 class="product-title">韩式复古实木双人床</h3>
+                            <div class="product-price">¥4,280</div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/table3/400/400" alt="韩式餐桌">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">餐厅</div>
+                            <h3 class="product-title">简约韩式实木圆餐桌</h3>
+                            <div class="product-price">¥2,899</div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cabinet4/400/400" alt="韩式衣柜">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">卧室</div>
+                            <h3 class="product-title">嵌入式韩式三开门衣柜</h3>
+                            <div class="product-price">¥5,599</div>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: var(--spacing-lg);">
+                    <a href="#" class="btn btn-outline">查看更多商品</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="guide">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-content">
+                        <h2>如何挑选适合的韩式家具？</h2>
+                        <p style="margin-bottom: var(--spacing-lg); color: var(--text-light);">
+                            韩式家具以其柔和的线条、温馨的色调和实用的设计深受喜爱。在选购时，除了关注美观，还需考虑材质、尺寸与空间搭配。
+                        </p>
+                        <ul class="guide-list">
+                            <li>
+                                <div class="icon">✓</div>
+                                <div>
+                                    <h4>注重板材环保性</h4>
+                                    <p style="font-size: 14px; color: var(--text-light);">韩式风格常使用实木贴皮或环保板材，购买前请确认甲醛释放量是否符合国家标准。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">✓</div>
+                                <div>
+                                    <h4>色彩搭配建议</h4>
+                                    <p style="font-size: 14px; color: var(--text-light);">经典的米色、浅灰色、原木色是韩式家具的主色调，搭配淡雅的窗帘和床品效果更佳。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">✓</div>
+                                <div>
+                                    <h4>空间测量与定制</h4>
+                                    <p style="font-size: 14px; color: var(--text-light);">对于小户型，建议选择多功能或嵌入式家具；大户型则可尝试更奢华的雕花款式。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guide-visual">
+                        <img src="https://picsum.photos/seed/furnituredecor/600/450" alt="韩式家居搭配示意图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">韩式家具的保养方法有哪些？</div>
+                        <div class="faq-answer">
+                            避免阳光直射，防止木材开裂变色；定期使用专用的家具护理蜡擦拭，保持光泽；避免重物撞击和尖锐物品划伤表面。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">定制家具需要多长时间？</div>
+                        <div class="faq-answer">
+                            从确认设计方案到工厂生产通常需要15-20个工作日，物流配送及上门安装一般需要3-5个工作日，具体时间视订单量而定。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否支持全国配送？</div>
+                        <div class="faq-answer">
+                            是的，我们提供全国大部分城市的免费送货上门服务，偏远地区需咨询客服了解具体费用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">
+                        专注韩式家居设计十余年，致力于将韩国的简约美学与舒适生活方式引入中国家庭。我们坚持环保理念，用匠心工艺为您打造每一个细节完美的家。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">新品推荐</a></li>
+                        <li><a href="#">全屋定制</a></li>
+                        <li><a href="#">软装搭配指南</a></li>
+                        <li><a href="#">品牌故事</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">售后政策</a></li>
+                        <li><a href="#">物流查询</a></li>
+                        <li><a href="#">安装说明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：service@hanfurniture.com</li>
+                        <li>地址：中国·XX市家居产业园A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 韩式家具官方网 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
