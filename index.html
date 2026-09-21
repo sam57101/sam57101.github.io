@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="相宜本草深层清洁面膜官方首页，提供深层清洁、补水保湿、毛孔净透护肤方案。包含产品功效介绍、使用方法、用户评价及选购指南。">
+    <meta name="keywords" content="相宜本草深层清洁面膜, 相宜本草面膜, 深层清洁面膜, 去黑头面膜, 补水面膜">
+    <title>相宜本草深层清洁面膜-深层净澈毛孔与补水修护指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e3e3e;
+            --primary-light: #d48c8c;
+            --secondary-color: #f4f1ea;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #ffffff;
+            --bg-section: #faf9f6;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            padding: 80px 0 60px;
+            display: flex;
+            align-items: center;
+            min-height: 600px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(142, 62, 62, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* Product Features */
+        .features {
+            background: var(--bg-body);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Usage Guide */
+        .usage {
+            background: var(--bg-section);
+        }
+
+        .usage-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .step-item {
+            position: relative;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .step-item h4 {
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .usage-diagram {
+            margin-top: 50px;
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .diagram-img {
+            flex: 1;
+            border-radius: 8px;
+        }
+
+        .diagram-text {
+            flex: 1;
+        }
+
+        .diagram-text h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .diagram-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .diagram-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: var(--bg-body);
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #fafafa;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--bg-section);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .faq-item h4 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2b2b2b;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .usage-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .usage-diagram {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .usage-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                相宜本草 <span>深层清洁</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#product" class="active">产品介绍</a></li>
+                    <li><a href="#benefits">核心功效</a></li>
+                    <li><a href="#usage">使用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline">查看成分</a>
+                <a href="#" class="btn-primary">立即购买</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="hero-tags">
+                        <span class="tag">深层净澈</span>
+                        <span class="tag">毛孔管理</span>
+                        <span class="tag">补水保湿</span>
+                    </div>
+                    <h1>相宜本草深层清洁面膜<br><span>净澈毛孔，唤醒水润</span></h1>
+                    <p>采用草本精粹与现代科技结合，深入肌底清除多余油脂与污垢，在净化毛孔的同时为肌肤注入充足水分，恢复肌肤水油平衡，呈现健康光泽。</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; @media(min-width: 992px){justify-content: flex-start;}">
+                        <a href="#product" class="btn-primary" style="padding: 12px 30px; font-size: 1rem;">了解产品详情</a>
+                        <a href="#usage" class="btn-outline" style="padding: 12px 30px; font-size: 1rem;">查看使用教程</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for Product Visual -->
+                    <img src="https://picsum.photos/seed/skin_care_mask/600/600" alt="相宜本草深层清洁面膜产品图">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="benefits" class="section features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心功效</h2>
+                    <p>专为油性及混合性肌肤设计，解决肌肤油腻与暗沉问题</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💧</div>
+                        <h3>深层补水</h3>
+                        <p>富含天然保湿因子，在清洁的同时锁住水分，避免洗后紧绷，维持肌肤水润状态。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧼</div>
+                        <h3>毛孔净透</h3>
+                        <p>吸附毛孔内多余油脂与老化角质，温和疏通毛孔，改善毛孔粗大及黑头现象。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>草本修护</h3>
+                        <p>萃取当归、红景天等本草精华，舒缓肌肤，提升肌肤自身抵抗力，恢复健康屏障。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guide -->
+        <section id="usage" class="section usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>科学使用指南</h2>
+                    <p>遵循正确步骤，让清洁面膜发挥最大功效</p>
+                </div>
+                
+                <div class="usage-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>彻底洁面</h4>
+                        <p>先用温和的洗面奶彻底清洁面部，去除表面污垢和彩妆残留。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>涂抹面膜</h4>
+                        <p>取适量面膜均匀涂抹于面部，避开眼周和唇部敏感区域。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>静待吸收</h4>
+                        <p>等待10-15分钟，让面膜中的有效成分充分接触并吸收。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4>清洗肌肤</h4>
+                        <p>用温水将面膜洗净，可配合打圈按摩，最后使用爽肤水收敛毛孔。</p>
+                    </div>
+                </div>
+
+                <div class="usage-diagram">
+                    <div class="diagram-img">
+                        <img src="https://picsum.photos/seed/skincare_routine/500/300" alt="护肤步骤示意图">
+                    </div>
+                    <div class="diagram-text">
+                        <h3>为什么每周需要1-2次深层清洁？</h3>
+                        <ul class="diagram-list">
+                            <li>日常洁面只能带走表面污垢，无法深入毛孔内部。</li>
+                            <li>定期使用深层清洁面膜可以有效预防黑头、粉刺的形成。</li>
+                            <li>去除老废角质后，后续护肤品（如精华、面霜）的吸收率会显著提升。</li>
+                            <li>帮助肌肤恢复清爽状态，提升后续底妆的服帖度。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="section comparison">
+            <div class="container">
+                <div class="section-header">
+                    <h2>产品参数对比</h2>
+                    <p>了解产品规格与适用场景</p>
+                </div>
+                <div class="comparison-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>相宜本草深层清洁面膜</th>
+                                <th>普通清洁泥膜</th>
+                                <th>普通补水面膜</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>主要成分</td>
+                                <td>当归、红景天、高分子吸水胶体</td>
+                                <td>高岭土、膨润土</td>
+                                <td>透明质酸、甘油</td>
+                            </tr>
+                            <tr>
+                                <td>清洁力度</td>
+                                <td>适中，温和不紧绷</td>
+                                <td>较强，易干燥紧绷</td>
+                                <td>无清洁作用</td>
+                            </tr>
+                            <tr>
+                                <td>补水效果</td>
+                                <td>清洁同时锁水</td>
+                                <td>清洁后需立刻补水</td>
+                                <td>直接补水</td>
+                            </tr>
+                            <tr>
+                                <td>适用肤质</td>
+                                <td>油性、混合性、暗沉肌</td>
+                                <td>油性肌</td>
+                                <td>所有肤质</td>
+                            </tr>
+                            <tr>
+                                <td>使用频率</td>
+                                <td>每周1-2次</td>
+                                <td>每周1-2次</td>
+                                <td>每周2-3次</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于使用过程中的疑问与解答</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>❓ 这款面膜适合敏感肌使用吗？</h4>
+                        <p>相宜本草深层清洁面膜采用温和配方，适合大多数肌肤类型。但对于极度敏感肌肤，建议先在耳后做局部测试，确认无不适后再全脸使用。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>❓ 敷完面膜后可以马上护肤吗？</h4>
+                        <p>建议敷完面膜后先用清水洗净，待面部微干后，再使用爽肤水、精华和乳液进行后续护肤，这样能更好地锁住水分。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>❓ 面膜干了之后需要水洗吗？</h4>
+                        <p>是的，面膜干透后需要用温水清洗干净。如果不及时清洗，面膜干透后反而会反向吸收肌肤水分，导致肌肤更加干燥。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>❓ 可以每天使用吗？</h4>
+                        <p>不建议每天使用。深层清洁面膜的主要功能是疏通毛孔和吸附油脂，过于频繁使用可能会破坏肌肤的天然屏障功能。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>相宜本草</h3>
+                    <p>源自中国草本，专注于东方肌肤护理研究。以天然本草精华结合现代科技，为消费者提供安全、有效的护肤产品。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">深层清洁系列</a></li>
+                        <li><a href="#">红景天系列</a></li>
+                        <li><a href="#">双效系列</a></li>
+                        <li><a href="#">男士系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>护肤知识</h4>
+                    <ul>
+                        <li><a href="#">毛孔管理指南</a></li>
+                        <li><a href="#">油皮护理误区</a></li>
+                        <li><a href="#">清洁面膜使用教程</a></li>
+                        <li><a href="#">肌肤补水攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">消费者服务热线</a></li>
+                        <li><a href="#">在线客服</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 相宜本草官方展示页. 本页面为设计演示，非官方网站.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
